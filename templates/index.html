@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Lawyer Assistant — Indian Law Guidance</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">⚖️</span>
+        <div>
+          <h1>AI Lawyer Assistant</h1>
+          <p class="tagline">General legal guidance based on Indian laws</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Disclaimer Banner -->
+  <div class="disclaimer-banner" role="alert">
+    <span class="disclaimer-icon">ℹ️</span>
+    <span>
+      <strong>Disclaimer:</strong> This AI assistant is <strong>not a licensed lawyer</strong>.
+      Responses are for general informational purposes only and do not constitute legal advice.
+      Please consult a qualified advocate for specific legal matters.
+    </span>
+  </div>
+
+  <!-- Main Chat Container -->
+  <main class="main">
+    <div class="chat-container">
+
+      <!-- Chat Messages Area -->
+      <div class="chat-messages" id="chatMessages" aria-live="polite" aria-label="Chat messages">
+        <!-- Welcome message -->
+        <div class="message message--bot">
+          <div class="message__avatar">⚖️</div>
+          <div class="message__bubble">
+            <p>Hello! I'm your AI Legal Assistant, specialised in <strong>Indian law</strong>.</p>
+            <p>I can help you understand legal concepts related to:</p>
+            <ul>
+              <li>🔹 Indian Penal Code (IPC) &amp; CrPC</li>
+              <li>🔹 Consumer Protection Act</li>
+              <li>🔹 Tenancy &amp; Rental Laws</li>
+              <li>🔹 Employment &amp; Labour Rights</li>
+              <li>🔹 Cyber Laws (IT Act 2000)</li>
+              <li>🔹 Family Law &amp; Property Rights</li>
+              <li>🔹 RTI Act &amp; more</li>
+            </ul>
+            <p>How can I assist you today?</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Example Prompts -->
+      <div class="example-prompts" id="examplePrompts">
+        <p class="example-prompts__label">Try asking:</p>
+        <div class="example-prompts__list">
+          <button class="example-btn" data-prompt="My landlord is refusing to return my security deposit after I vacated the flat. What are my rights under Indian law?">
+            Security deposit dispute
+          </button>
+          <button class="example-btn" data-prompt="I bought a defective product online and the seller is not responding. What can I do under the Consumer Protection Act?">
+            Consumer complaint online purchase
+          </button>
+          <button class="example-btn" data-prompt="My employer has not paid my salary for two months. What legal action can I take?">
+            Unpaid salary by employer
+          </button>
+          <button class="example-btn" data-prompt="Someone is harassing me on social media. What sections of the IT Act apply and how do I file a complaint?">
+            Social media harassment
+          </button>
+          <button class="example-btn" data-prompt="What is the procedure to file an FIR in India and what are my rights as a complainant?">
+            How to file an FIR
+          </button>
+          <button class="example-btn" data-prompt="What are my rights if I am arrested by police in India?">
+            Rights on arrest
+          </button>
+        </div>
+      </div>
+
+      <!-- Input Area -->
+      <div class="chat-input-area">
+        <form class="chat-form" id="chatForm" autocomplete="off">
+          <textarea
+            id="userInput"
+            class="chat-input"
+            placeholder="Type your legal question here…"
+            rows="1"
+            maxlength="2000"
+            aria-label="Your legal question"
+            required
+          ></textarea>
+          <button type="submit" class="send-btn" id="sendBtn" aria-label="Send">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+              <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+            </svg>
+          </button>
+        </form>
+        <p class="char-count" id="charCount">0 / 2000</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>AI Lawyer Assistant &copy; 2025 &mdash; For informational purposes only. Not a substitute for professional legal advice.</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
