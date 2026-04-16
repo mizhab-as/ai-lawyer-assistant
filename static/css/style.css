@@ -6,27 +6,27 @@
 }
 
 :root {
-  --color-primary:       #1a3c6e;
-  --color-primary-light: #2554a0;
-  --color-accent:        #c8a84b;
-  --color-bg:            #f4f6fa;
-  --color-surface:       #ffffff;
-  --color-border:        #d8dde8;
-  --color-text:          #1e2a3a;
-  --color-text-muted:    #6b7a90;
-  --color-bot-bubble:    #eef2fb;
-  --color-user-bubble:   #1a3c6e;
-  --color-user-text:     #ffffff;
-  --color-disclaimer-bg: #fff8e6;
-  --color-disclaimer-border: #e0aa3a;
-  --color-error:         #c0392b;
-  --color-error-bg:      #fdf2f0;
+  --color-primary:       #d4af37;
+  --color-primary-light: #e6c547;
+  --color-accent:        #a89d6b;
+  --color-bg:            #0f0f0f;
+  --color-surface:       #1a1a1a;
+  --color-border:        #2d2d2d;
+  --color-text:          #e8e8e8;
+  --color-text-muted:    #888888;
+  --color-bot-bubble:    #252525;
+  --color-user-bubble:   #d4af37;
+  --color-user-text:     #0f0f0f;
+  --color-disclaimer-bg: #1a1a1a;
+  --color-disclaimer-border: #d4af37;
+  --color-error:         #ff6b6b;
+  --color-error-bg:      #2a1515;
 
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 24px;
-  --shadow-sm: 0 1px 4px rgba(0,0,0,0.08);
-  --shadow-md: 0 4px 16px rgba(0,0,0,0.10);
+  --shadow-sm: 0 1px 4px rgba(0,0,0,0.4);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.6);
   --font-sans: 'Segoe UI', system-ui, -apple-system, sans-serif;
   --transition: 0.2s ease;
 }
@@ -87,9 +87,9 @@ body {
 
 /* ===== Disclaimer Banner ===== */
 .disclaimer-banner {
-  background: var(--color-disclaimer-bg);
+  background: var(--color-surface);
   border-bottom: 2px solid var(--color-disclaimer-border);
-  color: #7a5c00;
+  color: var(--color-text);
   padding: 0.65rem 1.5rem;
   font-size: 0.85rem;
   display: flex;
@@ -203,7 +203,7 @@ body {
 .message__bubble strong { color: var(--color-primary); }
 
 .message--user .message__bubble strong {
-  color: #c8e0ff;
+  color: #0f0f0f;
 }
 
 /* Disclaimer inside bot bubble */
