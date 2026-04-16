@@ -1,9 +1,11 @@
 """Chat route — handles user queries and proxies them to the LLM API."""
 
+import logging
 from flask import Blueprint, request, jsonify, current_app
 from openai import OpenAI, OpenAIError
 
 chat_bp = Blueprint("chat", __name__)
+logger = logging.getLogger(__name__)
 
 
 def _get_client():
